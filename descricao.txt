@@ -1,0 +1,74 @@
+A companhia precisa desenvolver um plano de produção e transporte com o objetivo de
+minimizar os custos totais.
+
+Mais especificamente, a companhia deve determinar a quantidade de cada tipo
+de papel a ser produzida em cada máquina de cada fábrica e a quantidade que deve ser transportada de
+cada tipo de papel partindo de cada fábrica para cada consumidor.
+
+--------------------------------------
+J - nº clientes
+F - nº fabricas produtoras de papel
+L - nº maquinas
+M - nº de tipos de materias primas
+P - nº de tipos de papel
+--------------------------------------
+D[j,p] = demanda do cliente j em unidades de papel do tipo p;
+
+r[m,p,l] = unidades de matéria-prima m necessárias para produzir uma unidade de papel do tipo p na
+máquina l;
+
+R[m,f] = unidades de matéria-prima m disponíveis na fábrica f;
+
+C[l,f] = capacidade disponível de produção, em unidades de papel, da máquina l na fábrica f;
+
+p[p,l,f] = custo unitário de produção do papel tipo p utilizando a máquina l na fábrica f;
+
+t[p,f,j] = custo unitário de transporte do papel tipo p partindo da fábrica f até o cliente j;
+
+
+Executar para cada uma das instancias, considerando apenas valores inteiros. Em seguida fazer para valores nao inteiros
+
+|J| = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500} (nº clientes)
+
+Randomizar:
+---------------------------------
+|F| ∈ [|J|, 2|J|] (nº fabricas produtoras de papel) 
+
+|L| ∈ [5, 10] (nº maquinas) 
+
+|M|  ∈ [5, 10] (nº de tipos de materias primas)
+
+|P|  ∈ [5, 10] (nº de tipos de papel)
+---------------------------------
+
+D[j,p] ∈ [10, 100] (demanda do cliente j em unidades de papel do tipo p)
+
+r[m,p,l] ∈ [1, 10] (unidades de matéria-prima m necessárias para produzir uma unidade de papel do tipo p na máquina l)
+
+R[m,f] ∈ [100, 1000] (unidades de matéria-prima m disponíveis na fábrica f)
+
+C[l,f] ∈ [10, 100] (capacidade disponível de produção, em unidades de papel, da máquina l na fábrica f)
+
+p[p,l,f] ∈ [10, 100] (custo unitário de produção do papel tipo p utilizando a máquina l na fábrica f)
+
+t[p,f,j] ∈ [10, 20] (custo unitário de transporte do papel tipo p partindo da fábrica f até o cliente j)
+
+---------------------------------
+Determinar:
+
+X[p,l,f] = quantidade do papel tipo p utilizando a máquina l na fábrica f (associado a p[p,l,f])
+Y[p,f,j] = quantidade de papel tipo p a ser transportado da fábrica f até o cliente j
+
+---------------------------------
+
+MINIMIZAR: X.p + Y.t (custo total)
+
+SUJEITO A: 
+Y[(p,f),j] - D = 0 (nao sei expressar direito isso ainda, mas seria que a quantidade total de papel do tipo p (somando a produção de todas as fábricas) transportada até o cliente j tem que ser igual a demanda D[j,p] desse cliente)
+
+
+as unidades de matéria prima m disponível na fábrica f (dado por R[m,f]) deve ser suficiente para produzir a quantidade de papel necessário na fábrica (dado por X[(p,l),f]) sendo que para a produção de papel do tipo p na máquina l demanda uma quantidade r[m,l,p] de matéria prima. Além disso, cada máquina l da fábrica f pode produzir até C[l,f] unidades de papel
+
+
+
+
