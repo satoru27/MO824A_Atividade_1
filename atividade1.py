@@ -35,20 +35,24 @@ print(f"D={D.shape}\nr={r.shape}\nR={R.shape}\nC={C.shape}\np={p.shape}\nt={t.sh
 
 for j in range(J):
     for k in range(P):
-        D[j,k] = random.randrange(10, 100+1)
+        #D[j,k] = random.randrange(10, 100+1)
+        D[j,k] = random.randrange(10, 20+1)
 
 for m in range(M):
     for k in range(P):
         for l in range(L):
-            r[m,k,l] = random.randrange(1, 10+1)
+            #r[m,k,l] = random.randrange(1, 10+1)
+            r[m,k,l] = random.randrange(1, 5+1)
 
 for m in range(M):
     for f in range(F):
-        R[m,f] = random.randrange(100, 1000+1)
+        #R[m,f] = random.randrange(100, 1000+1)
+        R[m,f] = random.randrange(800, 1000+1)
 
 for l in range(L):
     for f in range(F):
-            C[l,f]= random.randrange(10, 100+1)
+            #C[l,f]= random.randrange(10, 100+1)
+            C[l,f]= random.randrange(80, 100+1)
 
 for k in range(P):
     for l in range(L):
