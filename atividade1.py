@@ -86,6 +86,8 @@ mdl.addConstrs(sum(x[k,l,f] for l in range(L) for f in range(F)) >= sum(D[j,k] f
 
 mdl.addConstrs(sum(y[k,f,j] for f in range(F)) >= D[j,k] for k in range(P) for j in range(J))
 
+mdl.addConstrs(sum(x[k,l,f] for k in range(P)) <= C[l,f] for l in range(L) for f in range(F))
+
 mdl.addConstrs(sum(x[k,l,f] * r[m,k,l] for k in range(P) for l in range(L)) <= R[m,f] for f in range(F) for m in range(M))
 
 mdl.optimize()
