@@ -2,6 +2,7 @@
 #from gurobipy import GRB
 import random
 import numpy as np
+from gurobipy import Model,GRB
 
 #J = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500]
 J = 50 # nº clientes
@@ -62,3 +63,25 @@ for k in range(P):
 
 #print("-"*30)
 #print(f"D={D}\nr={r}\nR={R}\nC={C}\np={p}\nt={t}")
+
+
+#inicio modelagem
+
+mdl = Model('papel')
+x = mdl.addMVar(p.shape, vtype=GRB.INTEGER)
+y = mdl.addMVar(t.shape, vtype=GRB.INTEGER)
+mdl.modelSense = GRB.MINIMIZE
+
+
+mdl.setObjective(sum(p[k,l,f] * x[k,l,f]
+                         for k in range(P) for l in range(L) for f in range(F))
+                + sum(t[k,f,j] * y[k,f,j]
+                          for k in range(P) for l in range(L) for j in range(J)))
+
+mdl.addConstrs(sum(x[k,l,f] for l in range(L) for f in range(F)) >= sum(D[j,k] for j in range(J)) for k in range(P))
+
+mdl.addConstrs(sum(y[k,f,j] for f in range(F)) >= D[j,k] for k in range(P) for j in range(J))
+
+mdl.addConstrs(sum(x[k,l,f] * r[m,k,l] for k in range(P) for l in range(L)) <= R[m,f] for f in range(F) for m in range(M))
+
+mdl.optimize()
