@@ -75,6 +75,7 @@ mdl = Model('papel')
 x = mdl.addMVar(p.shape, vtype=GRB.INTEGER)
 y = mdl.addMVar(t.shape, vtype=GRB.INTEGER)
 mdl.modelSense = GRB.MINIMIZE
+mdl.setParam('TimeLimit', 30*60)
 
 
 mdl.setObjective(sum(p[k,l,f] * x[k,l,f]
