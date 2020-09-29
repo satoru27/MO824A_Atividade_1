@@ -1,0 +1,118 @@
+J = 100
+__________________________________
+Inteiro:
+seed = 17
+------------------------------
+J=100
+F=166
+L=8
+M=7
+P=7
+------------------------------
+D=(100, 7)
+r=(7, 7, 8)
+R=(7, 166)
+C=(8, 166)
+p=(7, 8, 166)
+t=(7, 166, 100)
+Using license file C:\Users\vitor\gurobi.lic
+Academic license - for non-commercial use only
+Changed value of parameter TimeLimit to 1800.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 3197 rows, 125496 columns and 199864 nonzeros
+Model fingerprint: 0xb872c2cf
+Variable types: 0 continuous, 125496 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [1e+01, 2e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+01, 2e+03]
+Presolve removed 700 rows and 116200 columns
+Presolve time: 0.09s
+Presolved: 2497 rows, 9296 columns, 83664 nonzeros
+Variable types: 0 continuous, 9296 integer (0 binary)
+Found heuristic solution: objective 216013.00000
+Found heuristic solution: objective 144418.00000
+
+Root relaxation: objective 1.066558e+05, 35 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 106655.800    0   13 144418.000 106655.800  26.1%     -    0s
+H    0     0                    106658.00000 106655.800  0.00%     -    0s
+
+Explored 1 nodes (39 simplex iterations) in 0.20 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 106658 144418 216013 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.066580000000e+05, best bound 1.066560000000e+05, gap 0.0019%
+------------------------------
+Runtime (optimization) = 0.20980262756347656
+Modelling time = 83.91191625595093
+
+
+
+
+
+__________________________________
+Real:
+seed = 17
+------------------------------
+J=100
+F=166
+L=8
+M=7
+P=7
+------------------------------
+D=(100, 7)
+r=(7, 7, 8)
+R=(7, 166)
+C=(8, 166)
+p=(7, 8, 166)
+t=(7, 166, 100)
+Using license file C:\Users\vitor\gurobi.lic
+Academic license - for non-commercial use only
+Changed value of parameter TimeLimit to 1800.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 3197 rows, 125496 columns and 199864 nonzeros
+Model fingerprint: 0x2d6807b7
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [1e+01, 2e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+01, 2e+03]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 700 rows and 116200 columns
+Presolve time: 0.08s
+Presolved: 2497 rows, 9296 columns, 83664 nonzeros
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 3.021e+04
+ Factor NZ  : 3.738e+04 (roughly 5 MBytes of memory)
+ Factor Ops : 6.069e+05 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   1.64411801e+08  0.00000000e+00  7.28e+03 0.00e+00  2.36e+04     0s
+
+Barrier performed 0 iterations in 0.12 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 144 iterations and 0.13 seconds
+Optimal objective  1.066558000e+05
+------------------------------
+Runtime (optimization) = 0.139434814453125
+Modelling time = 80.52089881896973

@@ -6,6 +6,7 @@ from gurobipy import Model,GRB
 import time
 
 build_start_time = time.time()
+real_values = False
 seed = 13
 random.seed(seed)
 print(f"seed = {seed}")
@@ -80,8 +81,15 @@ build_time_end = time.time()
 model_time_start = time.time()
 
 mdl = Model('papel')
-x = mdl.addMVar(p.shape, vtype=GRB.INTEGER)
-y = mdl.addMVar(t.shape, vtype=GRB.INTEGER)
+
+if real_values:
+    x = mdl.addMVar(p.shape, vtype=GRB.CONTINUOUS)
+    y = mdl.addMVar(t.shape, vtype=GRB.CONTINUOUS)
+else:
+    x = mdl.addMVar(p.shape, vtype=GRB.INTEGER)
+    y = mdl.addMVar(t.shape, vtype=GRB.INTEGER)
+
+
 mdl.modelSense = GRB.MINIMIZE
 mdl.setParam('TimeLimit', 30*60)
 
