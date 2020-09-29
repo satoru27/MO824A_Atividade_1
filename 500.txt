@@ -1,9 +1,147 @@
 J = 500
 __________________________________
 Inteiro:
+seed = 47
+------------------------------
+J=500
+F=680
+L=5
+M=8
+P=9
+------------------------------
+D=(500, 9)
+r=(8, 9, 5)
+R=(8, 680)
+C=(5, 680)
+p=(9, 5, 680)
+t=(9, 680, 500)
+Using license file C:\Users\vitor\gurobi.lic
+Academic license - for non-commercial use only
+Changed value of parameter TimeLimit to 1800.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 13349 rows, 3090600 columns and 3366000 nonzeros
+Model fingerprint: 0xdbb0e24d
+Variable types: 0 continuous, 3090600 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [1e+01, 1e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+01, 8e+03]
+Presolve removed 4500 rows and 3060000 columns
+Presolve time: 1.11s
+Presolved: 8849 rows, 30600 columns, 306000 nonzeros
+Variable types: 0 continuous, 30600 integer (0 binary)
+Found heuristic solution: objective 887177.00000
 
+Root relaxation: objective 7.307139e+05, 494 iterations, 0.04 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 730713.854    0  109 887177.000 730713.854  17.6%     -    2s
+H    0     0                    730774.00000 730713.854  0.01%     -    2s
+
+Explored 1 nodes (522 simplex iterations) in 2.75 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 730774 887177 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.307740000000e+05, best bound 7.307140000000e+05, gap 0.0082%
+------------------------------
+Runtime (optimization) = 2.770587921142578
+Modelling time = 1355.1360030174255
 
 
 
 __________________________________
 Real:
+seed = 47
+------------------------------
+J=500
+F=680
+L=5
+M=8
+P=9
+------------------------------
+D=(500, 9)
+r=(8, 9, 5)
+R=(8, 680)
+C=(5, 680)
+p=(9, 5, 680)
+t=(9, 680, 500)
+Using license file C:\Users\vitor\gurobi.lic
+Academic license - for non-commercial use only
+Changed value of parameter TimeLimit to 1800.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 13349 rows, 3090600 columns and 3366000 nonzeros
+Model fingerprint: 0xf4573fc4
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [1e+01, 1e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+01, 8e+03]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 4500 rows and 3060000 columns
+Presolve time: 1.39s
+Presolved: 8849 rows, 30600 columns, 306000 nonzeros
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.258e+05
+ Factor NZ  : 1.415e+05 (roughly 17 MBytes of memory)
+ Factor Ops : 2.387e+06 (less than 1 second per iteration)
+ Threads    : 4
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   1.38545892e+09  0.00000000e+00  1.53e+04 0.00e+00  5.97e+04     1s
+   1   1.58471320e+08 -2.34115160e+07  2.07e+03 8.53e-14  8.24e+03     1s
+   2   9.69144599e+06 -1.09432307e+07  5.39e+01 8.53e-14  6.49e+02     2s
+   3   2.35946077e+06  1.45103835e+05  0.00e+00 5.68e-14  5.61e+01     2s
+   4   1.70193411e+06  4.30993718e+05  0.00e+00 2.84e-14  3.22e+01     2s
+   5   1.35110235e+06  5.57349842e+05  0.00e+00 2.84e-14  2.01e+01     2s
+   6   1.13396146e+06  6.34339483e+05  0.00e+00 2.84e-14  1.27e+01     2s
+   7   9.78204619e+05  6.87118947e+05  0.00e+00 2.84e-14  7.38e+00     2s
+   8   9.14561499e+05  7.10544766e+05  0.00e+00 2.84e-14  5.17e+00     2s
+   9   8.46934822e+05  7.21978306e+05  0.00e+00 2.84e-14  3.17e+00     2s
+  10   7.98105914e+05  7.25860021e+05  0.00e+00 2.84e-14  1.83e+00     2s
+  11   7.67369198e+05  7.28306753e+05  0.00e+00 2.84e-14  9.90e-01     2s
+  12   7.52286677e+05  7.28616559e+05  0.00e+00 2.84e-14  6.00e-01     2s
+  13   7.46457482e+05  7.29300434e+05  0.00e+00 2.84e-14  4.35e-01     2s
+  14   7.45008151e+05  7.29456833e+05  0.00e+00 2.84e-14  3.94e-01     2s
+  15   7.43177858e+05  7.30053455e+05  0.00e+00 2.84e-14  3.33e-01     2s
+  16   7.39793455e+05  7.30289729e+05  0.00e+00 2.84e-14  2.41e-01     2s
+  17   7.36417272e+05  7.30455061e+05  0.00e+00 2.84e-14  1.51e-01     2s
+  18   7.33925194e+05  7.30574130e+05  0.00e+00 2.84e-14  8.49e-02     2s
+  19   7.32816705e+05  7.30629757e+05  0.00e+00 2.84e-14  5.54e-02     2s
+  20   7.31248371e+05  7.30689739e+05  0.00e+00 2.84e-14  1.42e-02     2s
+  21   7.30738925e+05  7.30712718e+05  0.00e+00 4.26e-14  6.64e-04     2s
+  22   7.30713879e+05  7.30713852e+05  0.00e+00 4.26e-14  6.67e-07     2s
+  23   7.30713854e+05  7.30713854e+05  7.28e-11 4.26e-14  6.67e-10     2s
+
+Barrier solved model in 23 iterations and 1.79 seconds
+Optimal objective 7.30713854e+05
+
+Crossover log...
+
+     247 PPushes remaining with PInf 0.0000000e+00                 2s
+       0 PPushes remaining with PInf 0.0000000e+00                 2s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 9.5895514e-14      2s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     250    7.3071385e+05   0.000000e+00   0.000000e+00      2s
+
+Solved with dual simplex
+Solved in 1247 iterations and 2.38 seconds
+Optimal objective  7.307138536e+05
+------------------------------
+Runtime (optimization) = 2.557159423828125
+Modelling time = 1340.2203693389893
