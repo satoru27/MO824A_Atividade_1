@@ -4,6 +4,10 @@ import random
 import numpy as np
 from gurobipy import Model,GRB
 
+seed = 13
+random.seed(seed)
+print(f"seed = {seed}")
+
 #J = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500]
 J = 50 # nº clientes
 F = random.randrange(J, 2*J +1) # nº fabricas produtoras de papel
@@ -92,3 +96,6 @@ mdl.addConstrs(sum(x[k,l,f] for k in range(P)) <= C[l,f] for l in range(L) for f
 mdl.addConstrs(sum(x[k,l,f] * r[m,k,l] for k in range(P) for l in range(L)) <= R[m,f] for f in range(F) for m in range(M))
 
 mdl.optimize()
+
+print("-"*30)
+print(f"Runtime = {mdl.Runtime}")
