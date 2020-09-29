@@ -3,7 +3,9 @@
 import random
 import numpy as np
 from gurobipy import Model,GRB
+import time
 
+build_start_time = time.time()
 seed = 13
 random.seed(seed)
 print(f"seed = {seed}")
@@ -68,12 +70,14 @@ for k in range(P):
         for j in range(J):
             t[k,f,j] = random.randrange(10, 20+1)
 
+build_time_end = time.time()
 
 #print("-"*30)
 #print(f"D={D}\nr={r}\nR={R}\nC={C}\np={p}\nt={t}")
 
 
 #inicio modelagem
+model_time_start = time.time()
 
 mdl = Model('papel')
 x = mdl.addMVar(p.shape, vtype=GRB.INTEGER)
@@ -95,7 +99,15 @@ mdl.addConstrs(sum(x[k,l,f] for k in range(P)) <= C[l,f] for l in range(L) for f
 
 mdl.addConstrs(sum(x[k,l,f] * r[m,k,l] for k in range(P) for l in range(L)) <= R[m,f] for f in range(F) for m in range(M))
 
+model_time_end = time.time()
+
 mdl.optimize()
 
+end_time = time.time()
+
 print("-"*30)
-print(f"Runtime = {mdl.Runtime}")
+print(f"Runtime (optimization) = {mdl.Runtime}")
+print(f"Modelling time = {model_time_end - model_time_start}")
+
+# build_time_end - build_time_start
+# end_time - build_time_start
