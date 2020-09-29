@@ -1,9 +1,123 @@
 J = 300
 __________________________________
 Inteiro:
+seed = 31
+------------------------------
+J=300
+F=306
+L=8
+M=5
+P=8
+------------------------------
+D=(300, 8)
+r=(5, 8, 8)
+R=(5, 306)
+C=(8, 306)
+p=(8, 8, 306)
+t=(8, 306, 300)
+Using license file C:\Users\vitor\gurobi.lic
+Academic license - for non-commercial use only
+Changed value of parameter TimeLimit to 1800.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 6386 rows, 753984 columns and 871488 nonzeros
+Model fingerprint: 0x305397ec
+Variable types: 0 continuous, 753984 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [1e+01, 2e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+01, 5e+03]
+Presolve removed 2400 rows and 734400 columns
+Presolve time: 0.28s
+Presolved: 3986 rows, 19584 columns, 137088 nonzeros
+Variable types: 0 continuous, 19584 integer (0 binary)
+Found heuristic solution: objective 442826.00000
 
+Root relaxation: objective 3.799187e+05, 232 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 379918.714    0   54 442826.000 379918.714  14.2%     -    0s
+H    0     0                    379952.00000 379918.714  0.01%     -    0s
+
+Explored 1 nodes (237 simplex iterations) in 0.72 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 379952 442826 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.799520000000e+05, best bound 3.799190000000e+05, gap 0.0087%
+------------------------------
+Runtime (optimization) = 0.7310428619384766
+Modelling time = 363.2526135444641
 
 
 
 __________________________________
 Real:
+seed = 31
+------------------------------
+J=300
+F=306
+L=8
+M=5
+P=8
+------------------------------
+D=(300, 8)
+r=(5, 8, 8)
+R=(5, 306)
+C=(8, 306)
+p=(8, 8, 306)
+t=(8, 306, 300)
+Changed value of parameter TimeLimit to 1800.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 6386 rows, 753984 columns and 871488 nonzeros
+Model fingerprint: 0xeea42a91
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [1e+01, 2e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+01, 5e+03]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 2400 rows and 734400 columns
+Presolve time: 0.42s
+Presolved: 3986 rows, 19584 columns, 137088 nonzeros
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 4.712e+04
+ Factor NZ  : 5.971e+04 (roughly 10 MBytes of memory)
+ Factor Ops : 9.509e+05 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   5.43706760e+08  0.00000000e+00  1.33e+04 0.00e+00  3.87e+04     0s
+   1   4.79084982e+07 -1.00380195e+07  1.24e+03 5.68e-14  4.01e+03     1s
+   2   3.83512028e+06 -3.86488765e+06  2.07e+01 5.68e-14  3.87e+02     1s
+   3   3.54146066e+06 -2.68284692e+05  1.32e+01 4.26e-14  1.58e+02     1s
+   4   8.80167549e+05  2.36504317e+05  0.00e+00 2.84e-14  2.73e+01     1s
+   5   7.26744793e+05  3.00947603e+05  0.00e+00 2.84e-14  1.81e+01     1s
+   6   5.33723539e+05  3.41775472e+05  0.00e+00 2.84e-14  8.14e+00     1s
+   7   4.78814443e+05  3.65763751e+05  0.00e+00 2.84e-14  4.80e+00     1s
+   8   4.21077902e+05  3.72291410e+05  0.00e+00 2.84e-14  2.07e+00     1s
+   9   4.00417354e+05  3.77556543e+05  0.00e+00 2.84e-14  9.70e-01     1s
+  10   3.87934968e+05  3.79048345e+05  0.00e+00 2.84e-14  3.77e-01     1s
+
+Barrier performed 10 iterations in 0.69 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 610 iterations and 0.75 seconds
+Optimal objective  3.799187142e+05
+------------------------------
+Runtime (optimization) = 0.8048496246337891
+Modelling time = 389.900315284729
