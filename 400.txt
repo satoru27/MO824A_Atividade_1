@@ -1,9 +1,136 @@
 J = 400
 __________________________________
 Inteiro:
+seed = 41
+------------------------------
+J=400
+F=595
+L=7
+M=6
+P=6
+------------------------------
+D=(400, 6)
+r=(6, 6, 7)
+R=(6, 595)
+C=(7, 595)
+p=(6, 7, 595)
+t=(6, 595, 400)
+Using license file C:\Users\vitor\gurobi.lic
+Academic license - for non-commercial use only
+Changed value of parameter TimeLimit to 1800.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 10141 rows, 1452990 columns and 1627920 nonzeros
+Model fingerprint: 0x52c7d18e
+Variable types: 0 continuous, 1452990 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [1e+01, 1e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+01, 6e+03]
+Presolve removed 2400 rows and 1428000 columns
+Presolve time: 0.50s
+Presolved: 7741 rows, 24990 columns, 199920 nonzeros
+Variable types: 0 continuous, 24990 integer (0 binary)
+Found heuristic solution: objective 808816.00000
+Found heuristic solution: objective 561408.00000
 
+Root relaxation: objective 3.684234e+05, 103 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 368423.400    0   24 561408.000 368423.400  34.4%     -    1s
+H    0     0                    368427.00000 368423.400  0.00%     -    1s
+
+Explored 1 nodes (114 simplex iterations) in 1.23 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 368427 561408 808816 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.684270000000e+05, best bound 3.684240000000e+05, gap 0.0008%
+------------------------------
+Runtime (optimization) = 1.2486591339111328
+Modelling time = 639.2781355381012
 
 
 
 __________________________________
 Real:
+
+seed = 41
+------------------------------
+J=400
+F=595
+L=7
+M=6
+P=6
+------------------------------
+D=(400, 6)
+r=(6, 6, 7)
+R=(6, 595)
+C=(7, 595)
+p=(6, 7, 595)
+t=(6, 595, 400)
+Using license file C:\Users\vitor\gurobi.lic
+Academic license - for non-commercial use only
+Changed value of parameter TimeLimit to 1800.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 10141 rows, 1452990 columns and 1627920 nonzeros
+Model fingerprint: 0xa4d5c8ae
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [1e+01, 1e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+01, 6e+03]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 2400 rows and 1428000 columns
+Presolve time: 0.64s
+Presolved: 7741 rows, 24990 columns, 199920 nonzeros
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 8.033e+04
+ Factor NZ  : 1.006e+05 (roughly 14 MBytes of memory)
+ Factor Ops : 1.416e+06 (less than 1 second per iteration)
+ Threads    : 4
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   9.99326765e+08  0.00000000e+00  1.30e+04 0.00e+00  5.17e+04     1s
+   1   1.32416511e+08 -2.07846392e+07  1.85e+03 7.11e-14  7.89e+03     1s
+   2   9.35302275e+06 -7.71997061e+06  5.21e+01 8.53e-14  6.73e+02     1s
+   3   1.80041456e+06 -1.75043579e+06  0.00e+00 5.68e-14  1.08e+02     1s
+   4   1.45508847e+06  1.28653109e+05  0.00e+00 4.26e-14  4.05e+01     1s
+   5   1.84170009e+06  1.70466116e+05  0.00e+00 4.26e-14  5.11e+01     1s
+   6   1.61367687e+06  2.48802900e+05  0.00e+00 2.84e-14  4.17e+01     1s
+   7   1.16871424e+06  2.61539186e+05  0.00e+00 2.84e-14  2.77e+01     1s
+   8   8.86639816e+05  2.88677398e+05  0.00e+00 2.84e-14  1.83e+01     1s
+   9   5.97751358e+05  3.46355443e+05  0.00e+00 2.84e-14  7.68e+00     1s
+  10   5.57038452e+05  3.54626426e+05  0.00e+00 2.84e-14  6.18e+00     1s
+  11   4.97769359e+05  3.60285303e+05  0.00e+00 2.84e-14  4.20e+00     1s
+  12   4.72956861e+05  3.61715682e+05  0.00e+00 2.84e-14  3.40e+00     1s
+  13   4.55749281e+05  3.63446076e+05  0.00e+00 2.84e-14  2.82e+00     1s
+  14   4.15878181e+05  3.66115865e+05  0.00e+00 2.84e-14  1.52e+00     1s
+  15   4.02779703e+05  3.66437799e+05  0.00e+00 2.84e-14  1.11e+00     1s
+  16   3.81188504e+05  3.67885112e+05  0.00e+00 4.26e-14  4.06e-01     1s
+  17   3.69277213e+05  3.68336697e+05  0.00e+00 4.26e-14  2.87e-02     1s
+  18   3.68423715e+05  3.68421587e+05  0.00e+00 4.26e-14  6.50e-05     1s
+  19   3.68423400e+05  3.68423400e+05  2.33e-10 2.84e-14  7.69e-11     1s
+
+Barrier solved model in 19 iterations and 0.92 seconds
+Optimal objective 3.68423400e+05
+
+
+Solved with dual simplex
+Solved in 533 iterations and 1.02 seconds
+Optimal objective  3.684234000e+05
+------------------------------
+Runtime (optimization) = 1.124990463256836
+Modelling time = 646.5938329696655
